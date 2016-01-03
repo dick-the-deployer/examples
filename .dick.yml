@@ -2,15 +2,19 @@ pipeline:
   stages:
   - name: first
     autorun: true
-  - name: second
-    autorun: true
 
 jobs: 
   - stage: first
-    name: echo foo
+    name: output producer
     deploy:
       - echo foo
-  - stage: second
-    name: echo bar
-    deploy:
-      - exit 1
+      - sleep 3
+      - echo bar
+      - sleep 10
+      - echo foobar
+      - sleep 5
+      - echo uuu
+      - sleep 5
+      - echo aaa
+      - sleep 5
+      - echo ooo
