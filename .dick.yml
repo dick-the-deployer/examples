@@ -10,7 +10,16 @@ jobs:
     name: echo foo
     deploy:
       - echo foo
+  - stage: first
+    name: echo foo2
+    deploy:
+      - echo foo
+  - stage: first
+    name: echo foo3
+    deploy:
+      - echo foo
+      - sleep 100
   - stage: second
     name: echo bar
     deploy:
-      - exit 1
+      - echo bar
