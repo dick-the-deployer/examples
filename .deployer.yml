@@ -2,7 +2,8 @@ image: debian
 
 variables:
   - key: FOO
-  - value: bar
+    value: bar
+    
 pipeline:
   stages:
   - name: first
